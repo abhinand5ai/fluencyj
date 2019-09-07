@@ -21,9 +21,9 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>io.reactivex.rxjava3</groupId>
+            <groupId>io.reactivex</groupId>
             <artifactId>rxjava</artifactId>
-            <version>3.0.0-RC0</version>
+            <version>1.2.7</version>
         </dependency>
     </dependencies>
 
