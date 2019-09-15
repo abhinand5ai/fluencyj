@@ -1,7 +1,7 @@
 package com.abhinand.fluency.rxjava.ch02;
 
 
-import io.reactivex.Observable;
+import rx.Observable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +21,7 @@ public class Main {
             s.onNext(1);
             s.onNext(2);
             s.onNext(3);
-            s.onComplete();
+            s.onCompleted();
         });
         o.doOnNext(i -> System.out.println(Thread.currentThread()))
                 .filter(i -> i % 2 != 0)
@@ -35,7 +35,7 @@ public class Main {
                 s.onNext("one");
                 s.onNext("two");
 
-                s.onComplete();
+                s.onCompleted();
             }).start();
         });
 
@@ -43,7 +43,7 @@ public class Main {
             new Thread(() -> {
                 s.onNext("three");
                 s.onNext("four");
-                s.onComplete();
+                s.onCompleted();
             }).start();
         });
 

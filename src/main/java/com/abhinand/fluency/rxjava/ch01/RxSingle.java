@@ -1,16 +1,15 @@
 package com.abhinand.fluency.rxjava.ch01;
 
-import io.reactivex.Flowable;
-import io.reactivex.Single;
-import io.reactivex.schedulers.Schedulers;
 
 import java.math.BigInteger;
 import java.util.Iterator;
+import rx.Single;
+import rx.schedulers.Schedulers;
+
 
 public class RxSingle {
     public static void main(String[] args) {
-        Flowable<String> mergeAB = getDataA().mergeWith(getDataB());
-
+       getDataA().mergeWith(getDataB()).subscribe();
     }
 
     public static Single<String> getDataA() {

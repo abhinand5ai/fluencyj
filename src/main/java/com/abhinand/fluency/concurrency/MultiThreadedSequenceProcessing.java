@@ -1,12 +1,11 @@
 package com.abhinand.fluency.concurrency;
 
-import io.reactivex.Flowable;
-import io.reactivex.Observable;
+import rx.Observable;
 
 public class MultiThreadedSequenceProcessing {
 
     public static void main(String[] args) {
-        Flowable.just("Hello world").subscribe(System.out::println);
+        Observable.just("Hello world").subscribe(System.out::println);
 
     }
 
