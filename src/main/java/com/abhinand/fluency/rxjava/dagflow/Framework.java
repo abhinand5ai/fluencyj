@@ -11,7 +11,7 @@ public class Framework {
 
     public void run() {
         Schedulers.io();
-        dataBus = new HashMap<>();
+        dataBus   = new HashMap<>();
 
         Single<HashMap<Task, Object>> getBalanceSingle = Single.just(dataBus).map(d -> {
             balanceRequestCreator(d);
